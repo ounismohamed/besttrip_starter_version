@@ -5,20 +5,28 @@ import com.scrum.besttrip.experience.Experience;
 import java.util.List;
 
 public class Ville {
-   //Members
 
+
+
+
+    //Members
+    private String id;
     private String nomVille;
     private String paysVille;
     private String guide;
     private List<Experience> experiences;
 
-    public Ville(String p_nomVille, String p_paysVille, String p_guide, List<Experience> p_experiences) {
-        nomVille = p_nomVille;
-        paysVille = p_paysVille;
-        guide = p_guide;
+    public Ville(String id,String p_nomVille, String p_paysVille, String p_guide, List<Experience> p_experiences) {
+        this.id=id;
+        this.nomVille = p_nomVille;
+        this.paysVille = p_paysVille;
+        this.guide = p_guide;
         this.experiences = p_experiences;
     }
     //Getters
+    public String getId() {
+        return id;
+    }
     public String getnomVille() {
         return nomVille;
     }
@@ -36,6 +44,10 @@ public class Ville {
     }
 
     //Setters
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public void setnomVille(String nomVille) {
         nomVille = nomVille;

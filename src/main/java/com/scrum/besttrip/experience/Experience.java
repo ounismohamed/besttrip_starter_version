@@ -5,12 +5,20 @@ import java.util.List;
 public class Experience {
 
 
+
+
+
+
     //Members
+    private String id;
     private String descriptionExperience;
     private List<String> photosExperience;
     private int rateExperience;
 
     //Setters
+    public void setId(String id) {
+        this.id = id;
+    }
     public void setDescriptionExperience(String descriptionExperience) {
         this.descriptionExperience = descriptionExperience;
     }
@@ -35,8 +43,12 @@ public class Experience {
     public int getRateExperience() {
         return rateExperience;
     }
-
-    public Experience(String descriptionExperience, List<String> photosExperience, int rateExperience) {
+    public String getId() {
+        return id;
+    }
+    //ctrucor
+    public Experience(String id,String descriptionExperience, List<String> photosExperience, int rateExperience) {
+        this.id=id;
         this.descriptionExperience = descriptionExperience;
         this.photosExperience = photosExperience;
         this.rateExperience = rateExperience;
