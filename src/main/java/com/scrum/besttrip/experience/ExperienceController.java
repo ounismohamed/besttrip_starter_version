@@ -3,16 +3,16 @@ package com.scrum.besttrip.experience;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Service;
+
 import java.util.List;
 
+@RestController
 public class ExperienceController {
 
     @Autowired
     private ExperienceService ExperienceService1 = new ExperienceService();
 
     @RequestMapping("/experiences")
-
     public List<Experience> getAllExperiences(){
 
         return ExperienceService1.getAllexperiences();
