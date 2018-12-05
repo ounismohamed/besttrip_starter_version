@@ -29,4 +29,18 @@ public class VilleService {
         villes.add(ville); /* .add() is specific to the List data structure/collection*/
     }
 
+    public void updateVille(String id, Ville ville) {
+        int n =villes.size();
+        for (int i=0;i<n;i++){
+            Ville v=villes.get(i);
+            if (v.getId().equals(id)){
+                villes.set(i,ville);
+            return;
+            }
+        }
+    }
+
+    public void deleteVille(String id) {
+        villes.removeIf(t-> t.getId().equals(id));
+    }
 }
